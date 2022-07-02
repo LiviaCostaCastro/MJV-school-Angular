@@ -11,7 +11,7 @@ export class ProductsComponent implements OnInit {
 
   ProdutoAtivo = true;
 
-  produtos: Array<produtos> = [
+  produtos: produtos[] = [
     {
       nome: "iPhone 13 Pro",
       descricao: "Parte da frente em Ceramic Shield. Parte de trás em vidro e design em alumínio",

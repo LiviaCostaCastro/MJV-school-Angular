@@ -1,11 +1,11 @@
 
 <div *ngFor="let produto of produtos" class="produto">
     <div class="card-produto">
-      <h2> {{ i.nome }} </h2>
-      <p *ngif="ProdutoAtivo">{{ produtos.descricao }}</p>
-      <p *ngif="ProdutoAtivo">{{ produtos.preco }} </p>
-      <p *ngif="ProdutoAtivo">R${{ produtos.quantidade }}</p>
-      <img *ngif="ProdutoAtivo" src="{{ produtos.imagem }}" width="250px" height="250px">
+      <h2> {{ produto.nome }} </h2>
+      <p *ngif="ProdutoAtivo">{{ produto.descricao }}</p>
+      <p *ngif="ProdutoAtivo">{{ produto.preco }} </p>
+      <p *ngif="ProdutoAtivo">R${{ produto.quantidade }}</p>
+      <img src="{{produto.imagem}}" width="250px" height="250px">
       <p *ngif="ProdutoAtivo" [ngClass]="{ 'com-estoque': ProdutoAtivo, 'sem-estoque': !ProdutoAtivo }">
         {{ ProdutoAtivo ? 'Com estoque' : 'Sem estoque' }}</p>
       </div>
