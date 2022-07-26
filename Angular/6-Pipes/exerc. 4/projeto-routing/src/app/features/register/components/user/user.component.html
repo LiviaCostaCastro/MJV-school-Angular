@@ -1,0 +1,24 @@
+
+<div *ngFor="let aluno of alunos ">
+  <h1>ALUNOS CADASTRADOS</h1>
+  <table>
+    <thead>
+        <tr>
+            <th>Nome: </th>
+            <th>ID:</th>
+            <th>Valor da Mensalidade: </th>
+            <th>Ultimo Pagamento:</th>
+            <th>Data do Matricula:}</th>
+        </tr>
+  </thead>
+  <tbody>
+          <tr>
+            <td>{{ aluno.nome }}</td>
+            <td>{{ aluno.valorMensalidade | currency: 'R$'}}</td>
+            <td>{{ aluno.dataUltimoPgto | date : 'dd/MM/yy' }}</td>
+            <td>{{ aluno.dataInclusaoSistema | date : 'dd/MM/yy' }}</td>
+          </tr>
+  </tbody>
+</table>
+</div>
+
